@@ -60,10 +60,10 @@ public:
         max_prices_list[day_num - 1] = prices[day_num - 1];
         for(int i = day_num - 2; i >= 0; --i){
             int cur_day_profit = max_prices_list[i+1] - prices[i]; // 如果在第i天买入所能获得的最大收益
-            max_profit_list[i] = (cur_day_profit > second_max_profit_list[i+1]) ? cur_day_profit : second_max_profit_list[i+1];  // 第i天到最后一天所能获得的最大收益
+            second_max_profit_list[i] = (cur_day_profit > second_max_profit_list[i+1]) ? cur_day_profit : second_max_profit_list[i+1];  // 第i天到最后一天所能获得的最大收益
             max_prices_list[i] = (prices[i] > max_prices_list[i+1]) ? prices[i] : max_prices_list[i+1]; // 第i天到最后一天的最高股票价格
         }
-
+        
         //遍历求出最终两笔交易的最大收益
         int total_max_profit = INT_MIN;
         for(int i = 1; i < day_num; ++i){
@@ -78,3 +78,7 @@ public:
     }
 };
 ```
+
+执行用时: 8 ms, 在所有 C++ 提交中击败了 87.44% 的用户
+
+内存消耗: 15.8 MB, 在所有 C++ 提交中击败了 12.94% 的用户
