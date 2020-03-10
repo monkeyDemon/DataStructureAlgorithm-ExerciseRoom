@@ -10,7 +10,7 @@
 
 :beer: leetcode 141 hasCycle 环形链表
 
-leetcode 2 addTwoNumbers 两数相加
+:beer: leetcode 2 addTwoNumbers 两数相加
 
 leetcode 19 removeNthFromEnd 删除链表的倒数第N个节点
 
